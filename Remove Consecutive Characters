@@ -1,0 +1,12 @@
+string removeDuplicate(string s)
+{
+    // Write your code here
+    if(s[0] == '\0'){
+        return s;
+    }
+    if(s[0] == s[1]){
+        return removeDuplicate(s.substr(1));
+    }else{
+        return s[0] + removeDuplicate(s.substr(1));
+    }
+}
